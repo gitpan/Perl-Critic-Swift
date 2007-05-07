@@ -1,0 +1,34 @@
+---
+name: Perl-Critic-Swift
+version: v1.0.0
+author:
+  - 'Elliot Shank <perl@galumph.com>'
+abstract: A set of additional policies for Perl::Critic.
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Perl::Critic: 1.051
+  version: 0
+build_requires:
+  Test::More: 0
+  version: 0
+recommends:
+  Test::Pod: 0
+  Test::Pod::Coverage: 0
+  Test::Spelling: 0
+dynamic_config: 1
+provides:
+  Perl::Critic::Policy::CodeLayout::RequireUseUTF8:
+    file: lib/Perl/Critic/Policy/CodeLayout/RequireUseUTF8.pm
+    version: v1.0.0
+  Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8:
+    file: lib/Perl/Critic/Policy/Documentation/RequirePODUseEncodingUTF8.pm
+    version: v1.0.0
+  Perl::Critic::Swift:
+    file: lib/Perl/Critic/Swift.pm
+    version: v1.0.0
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
