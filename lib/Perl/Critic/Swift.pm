@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.0');
+use version; our $VERSION = qv('v1.0.1');
 
 1; # Magic true value required at end of module
 
@@ -29,7 +29,7 @@ announcing their participation in this grouping.
 
 =head1 VERSION
 
-This document describes Perl::Critic::Swift version 1.0.0.
+This document describes Perl::Critic::Swift version 1.0.1.
 
 
 =head1 SYNOPSIS
@@ -42,6 +42,10 @@ Some L<Perl::Critic> policies to make your code more clean.
 The included policies are:
 
 =over
+
+=item L<Perl::Critic::Policy::CodeLayout::RequireUseUTF8>
+
+Require that code includes a C<use utf8;> statement.  [Severity: 3]
 
 =item L<Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8>
 

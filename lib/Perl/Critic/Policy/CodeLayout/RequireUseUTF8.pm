@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.0');
+use version; our $VERSION = qv('v1.0.1');
 
 use List::MoreUtils qw{ any };
 
@@ -13,7 +13,7 @@ use Perl::Critic::Utils qw{ :severities };
 use base 'Perl::Critic::Policy';
 
 my $DESCRIPTION    = 'Code does not "use utf8;"';
-my $EXPLANATION    = 'Need to ensure code uses a modern encoding.';
+my $EXPLANATION    = 'Need to ensure code uses a modern encoding';
 
 sub supported_parameters { return ();                  }
 sub default_severity     { return $SEVERITY_MEDIUM;    }
@@ -35,9 +35,10 @@ sub violates {
 sub _is_use_utf8 {
     my ($include_statement) = @_;
 
-    return
+    return (
             $include_statement->type() eq 'use'
         and $include_statement->module() eq 'utf8'
+    );
 } # end _is_use_utf8()
 
 1;
@@ -50,7 +51,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::CodeLayout::RequireUseUTF8
+Perl::Critic::Policy::CodeLayout::RequireUseUTF8 - Require that all modules have a C<use utf8;> statement.
 
 =head1 AFFILIATION
 
@@ -60,7 +61,7 @@ This policy is part of L<Perl::Critic::Swift>.
 =head1 VERSION
 
 This document describes Perl::Critic::Policy::CodeLayout::RequireUseUTF8
-version 1.0.0.
+version 1.0.1.
 
 
 =head1 SYNOPSIS

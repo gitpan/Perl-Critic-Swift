@@ -7,12 +7,23 @@ use utf8;
 # Blah
 $x = 1;
 
-## name Basic failure
+## name No use statements
 ## failures 1
 ## cut
 
 # Blah
 $x = 1;
+
+
+## name Use statements, but no utf8
+## failures 1
+## cut
+
+use strict;
+use warnings;
+
+# Blah
+my $x = 1;
 
 
 # setup vim: set filetype=perl tabstop=4 softtabstop=4 expandtab :

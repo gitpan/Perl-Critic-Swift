@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.0');
+use version; our $VERSION = qv('v1.0.1');
 
 use List::MoreUtils qw{ any };
 
@@ -14,7 +14,7 @@ use base 'Perl::Critic::Policy';
 
 my $ENCODING_REGEX = qr/ ^ =encoding \s+ utf8 /xms;
 my $DESCRIPTION    = 'POD does not include "=encoding utf8" declaration';
-my $EXPLANATION    = 'Need to ensure that POD processors understand that the documentation may contain Unicode.';
+my $EXPLANATION    = 'Need to ensure that POD processors understand that the documentation may contain Unicode';
 
 sub supported_parameters { return ();                  }
 sub default_severity     { return $SEVERITY_MEDIUM;    }
@@ -42,7 +42,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8
+Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8 - Require that all modules that contain POD have a C<=encoding utf8> declaration.
 
 =head1 AFFILIATION
 
@@ -52,7 +52,7 @@ This policy is part of L<Perl::Critic::Swift>.
 =head1 VERSION
 
 This document describes
-Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8 version 1.0.0.
+Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8 version 1.0.1.
 
 
 =head1 SYNOPSIS
