@@ -1,4 +1,4 @@
-Perl-Critic-Swift version 1.0.1
+Perl-Critic-Swift version 1.0.2
 
 This module provides several Perl::Critic policies.
 
@@ -31,7 +31,7 @@ a bug in those tools and not in this distribution.
 
 COPYRIGHT AND LICENCE
 
-Copyright ©2007, Elliot Shank.  All rights reserved.
+Copyright ©2007-2008, Elliot Shank.  All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

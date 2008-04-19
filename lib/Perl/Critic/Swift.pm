@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.1');
+use version; our $VERSION = qv('v1.0.2');
 
 1; # Magic true value required at end of module
 
@@ -29,7 +29,7 @@ announcing their participation in this grouping.
 
 =head1 VERSION
 
-This document describes Perl::Critic::Swift version 1.0.1.
+This document describes Perl::Critic::Swift version 1.0.2.
 
 
 =head1 SYNOPSIS
@@ -102,7 +102,8 @@ Elliot Shank  C<< <perl@galumph.com> >>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright ©2007, Elliot Shank C<< <perl@galumph.com> >>. All rights reserved.
+Copyright ©2007-2008, Elliot Shank C<< <perl@galumph.com> >>. All rights
+reserved.
 
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself. See L<perlartistic>.

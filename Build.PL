@@ -42,7 +42,7 @@ $builder = $class->new(
     },
     requires           => {
         'version'           => 0,
-        'Perl::Critic'      => 1.051,
+        'Perl::Critic'      => 1.082,
     },
     recommends         => {
         'Test::Pod'                     => 0,
