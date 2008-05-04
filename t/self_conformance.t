@@ -4,8 +4,12 @@
 
 use strict;
 use warnings;
-use English qw( -no_match_vars );
-use File::Spec qw();
+
+use English qw< -no_match_vars >;
+
+use File::Spec qw<>;
+use Test::Perl::Critic;
+
 use Test::More;
 
 #-----------------------------------------------------------------------------
@@ -14,18 +18,13 @@ if ( !-d '.svn' && !$ENV{TEST_AUTHOR}) {
     ## no critic (RequireInterpolation)
     my $reason = 'Author test.  Set $ENV{TEST_AUTHOR} to a true value to run.';
     plan skip_all => $reason;
+    ## use critic
 }
-
-#-----------------------------------------------------------------------------
-
-eval { require Test::Perl::Critic; };
-plan skip_all => 'Test::Perl::Critic required to criticise code' if $EVAL_ERROR;
 
 #-----------------------------------------------------------------------------
 # Set up PPI caching for speed (used primarily during development)
 
 if ( $ENV{PERL_CRITIC_CACHE} ) {
-    require File::Spec;
     require PPI::Cache;
     my $cache_path
         = File::Spec->catdir( File::Spec->tmpdir,

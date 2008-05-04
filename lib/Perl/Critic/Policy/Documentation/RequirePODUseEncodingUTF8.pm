@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.2');
+use version; our $VERSION = qv('v1.0.3');
 
 use List::MoreUtils qw{ any };
 
@@ -55,7 +55,7 @@ This policy is part of L<Perl::Critic::Swift>.
 =head1 VERSION
 
 This document describes
-Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8 version 1.0.2.
+Perl::Critic::Policy::Documentation::RequirePODUseEncodingUTF8 version 1.0.3.
 
 
 =head1 SYNOPSIS

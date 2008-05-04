@@ -1,3 +1,5 @@
+use 5.006;
+use utf8;
 use strict;
 use warnings;
 
@@ -35,19 +37,28 @@ $builder = $class->new(
     module_name        => 'Perl::Critic::Swift',
     license            => 'perl',
     dist_author        => 'Elliot Shank <perl@galumph.com>',
-    dynamic_config     => 1,
+    dynamic_config     => 0,
     build_requires     => {
-        'version'           => 0,
-        'Test::More'        => 0,
+        'File::Spec'                => 0,
+        'Perl::Critic::TestUtils'   => 1.082,
+        'Test::Perl::Critic'        => 1.01,
+        'English'                   => 0,
+        'Test::More'                => 0,
     },
     requires           => {
-        'version'           => 0,
-        'Perl::Critic'      => 1.082,
+        'base'                  => 0,
+        'List::MoreUtils'       => 0.21,
+        'Perl::Critic::Policy'  => 1.082,
+        'Perl::Critic::Utils'   => 1.082,
+        'strict'                => 0,
+        'utf8'                  => 0,
+        'version'               => 0,
+        'warnings'              => 0,
     },
-    recommends         => {
-        'Test::Pod'                     => 0,
-        'Test::Pod::Coverage'           => 0,
-        'Test::Spelling'                => 0,
+    meta_merge      => {
+        configure_requires  => {
+            'Module::Build' => 0.2808,
+        },
     },
     create_packlist    => 1,
     sign               => 0,

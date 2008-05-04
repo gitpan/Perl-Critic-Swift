@@ -2,11 +2,12 @@
 
 use strict;
 use warnings;
-use Test::More;
-use English qw(-no_match_vars);
 
-# common P::C testing tools
-use Perl::Critic::TestUtils qw(pcritique fcritique subtests_in_tree);
+use English qw< -no_match_vars >;
+
+use Test::More;
+
+use Perl::Critic::TestUtils qw< pcritique fcritique subtests_in_tree >;
 Perl::Critic::TestUtils::block_perlcriticrc();
 
 my $subtests = subtests_in_tree( 't' );
